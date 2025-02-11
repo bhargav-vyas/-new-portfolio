@@ -14,8 +14,8 @@ const Projects = () => {
       tech: "Spring Boot, Java, MySQL",
       description:
         "An e-learning platform built with Spring Boot, Java, and MySQL. It supports user authentication, course management, and more.",
-      features: ["User Authentication", "Course Management", "Admin Dashboard"],
-      technologies: ["Spring Boot", "Java", "MySQL", "Hibernate"],
+      features: ["User Authentication","Course Management", "Assignments","Admin Dashboard"],
+      technologies: ["Spring Boot","Maven","Java", "MySQL", "Hibernate"],
       demoLink: "https://example.com",
     },
     {

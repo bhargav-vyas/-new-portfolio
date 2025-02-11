@@ -1,0 +1,215 @@
+/* General Styling */
+.aboutMe {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* Light text */
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  animation: fadeInDown 1s ease;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #007bff; /* Accent color */
+}
+
+/* Timeline Styling */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timelineItem {
+  background-color: #2a2a2a; /* Slightly lighter background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.role, .degree {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.company, .institution {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #999999;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Skills Styling */
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.skill {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Resume Download Button */
+.resumeButton {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 0.8rem 2rem;
+  background-color: #28a745; /* Green color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease, pulse 2s infinite 1s;
+}
+
+/* Hover Effect */
+.resumeButton:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple Effect on Click */
+.resumeButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.resumeButton:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow Effect on Hover */
+.resumeButton:hover {
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.6), 0 0 30px rgba(40, 167, 69, 0.4);
+}
+
+/* Gradient Border Effect */
+.resumeButton {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.resumeButton:hover {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}

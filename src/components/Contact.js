@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Contact.css"; // Import as a module
+import styles from "./Contact.module.css"; // Correct import
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,8 +39,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className={`${styles.contact} ${isVisible ? styles.visible : ""}`}>
-      <h2>Contact Me</h2>
-      <p>Have a question or want to work together? Reach out!</p>
+      <h2 className={styles.heading}>Contact Me</h2>
+      <p className={styles.subtext}>Have a question or want to work together? Reach out!</p>
 
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <input

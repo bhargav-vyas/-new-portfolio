@@ -1,0 +1,160 @@
+/* AllProjects.css */
+
+/* General styling for the All Projects section */
+.allProjects {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  animation: fadeInDown 1s ease;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+/* Grid layout for project cards */
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for individual project cards */
+.projectCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Hover effect for project cards */
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for project titles */
+.projectTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Styling for project descriptions */
+.projectDescription {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Styling for technologies list */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.technologies li {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Styling for links (GitHub and Live Demo) */
+.links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.link {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.link:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add animation delays for project cards */
+.projectCard:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.projectCard:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.projectCard:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.projectCard:nth-child(4) {
+  animation-delay: 0.8s;
+}
