@@ -79,83 +79,139 @@
 .hero-section .cta-button:hover {
   background: #16a085;
 }
-
-/* Project Details Section */
-.project-section {
-  padding: 4rem 5%;
-  background: #ecf0f1;
-}
-
-.project-section h2 {
+/* Footer Section */
+.footer {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #2c3e50;
-}
-
-.project-section .project-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.project-section .project-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-section .project-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.project-section .project-info h3 {
-  font-size: 1.8rem;
-  color: #2c3e50;
-}
-
-.project-section .project-info ul {
-  list-style: none;
-}
-
-.project-section .project-info ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #34495e;
-}
-
-.project-section .project-info .tech-stack {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.project-section .project-info .tech-stack span {
-  padding: 0.5rem 1rem;
-  background: #1abc9c;
-  color: white;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-
-.project-section .project-info .demo-button {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: 2rem;
   background: #2c3e50;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
 }
 
-.project-section .project-info .demo-button:hover {
-  background: #1abc9c;
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer .social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #1abc9c;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-section .project-details {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .navigation .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .navigation .brand {
+    font-size: 1.2rem;
+  }
+
+  .navigation .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+}/* Combined CSS */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.hero-section .cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: bounce 1.5s ease-in-out 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .cta-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #1abc9c, #3498db);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.hero-section .cta-button:hover::before {
+  background: linear-gradient(45deg, #3498db, #1abc9c);
 }
 
 /* Other Projects Section */
@@ -247,40 +303,77 @@
   margin-top: 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .project-section .project-details {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-  }
-
-  .navigation .nav-links {
-    gap: 1rem;
-  }
+/* Project Details Overlay and Modal */
+.project-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 2rem;
-  }
+.project-details-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .hero-section p {
-    font-size: 0.9rem;
-  }
+.project-details-modal h3 {
+  margin-top: 0;
+}
 
-  .navigation .brand {
-    font-size: 1.2rem;
-  }
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
 
-  .navigation .nav-links a {
-    font-size: 0.9rem;
-  }
-  
+.tech-item {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.demo-button, .close-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.demo-button {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.demo-button:hover {
+  background-color: #0056b3;
+}
+
+.close-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.close-button:hover {
+  background-color: #5a6268;
 }
