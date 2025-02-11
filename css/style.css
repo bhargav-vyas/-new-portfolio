@@ -1,0 +1,23 @@
+
+*{
+    color: blueviolet;
+    cursor:auto; 
+    /* this is for all the page  top to boottom */
+}
+.box{
+    width: 180px;
+    height: 80px;
+    background-color:lightblue; 
+    color: blueviolet;
+    border: 2px;
+    padding: 10px;
+     /* this is for the class only */
+}
+p{
+    color: red; 
+    /* this is for the all the  p tags */
+}
+#rrr{
+    font-size: 24px;
+    /* this is for the  */
+}
