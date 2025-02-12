@@ -6,34 +6,41 @@ const AboutMe = () => {
   const workExperience = [
     {
       id: 1,
-      company: 'Tech Corp',
+      company: 'Innovate in the project of the  Java and backend technologies',
       role: 'Software Engineer',
-      duration: 'Jan 2022 - Present',
-      description: 'Developed and maintained web applications using React and Node.js.',
+      duration: 'Jan 2023 - Present',
+      description: `Developed scalable web applications using React, JavaScript, and integrated RESTful APIs with Spring Boot and Hibernate. 
+              Optimized database performance and implemented authentication with JWT and OAuth. 
+              Led junior developers, conducted code reviews, and followed best coding practices. 
+              Worked with Git, CI/CD pipelines, Docker, and collaborated with designers for responsive web designs. 
+              Integrated third-party APIs, developed Android apps using Kotlin, and implemented IoT solutions with Raspberry Pi for embedded systems.`
     },
     {
-      id: 2,
-      company: 'Innovate Solutions',
-      role: 'Frontend Developer',
-      duration: 'Jun 2020 - Dec 2021',
-      description: 'Built responsive user interfaces and collaborated with design teams.',
-    },
+  id: 2,
+  company: 'Innovate in the project of the React',
+  role: 'Frontend Developer',
+  duration: 'Jan 2023 - Present',
+  description: `Developed responsive user interfaces using React and JavaScript, ensuring a seamless and 
+  dynamic user experience across web and mobile platforms. Collaborated closely with design teams to implement pixel-perfect designs and enhance 
+  user engagement. Integrated third-party APIs to extend functionality and optimized performance to meet both aesthetic and technical requirements. 
+  Ensured smooth functionality across devices by implementing responsive design principles, and contributed to UI/UX improvements based on user feedback. 
+  Actively participated in code reviews and followed best practices for front-end development to maintain high-quality, scalable code.`
+}
+
   ];
 
   const education = [
     {
       id: 1,
-      institution: 'University of Tech',
+      institution: 'Bharati Vidyapeeth University College of Engineering, Pune',
       degree: 'Bachelor of Technology in Electronics and Telecommunication Engineering (E&TC)',
       duration: '2023 - 2026',
-    //   averageMarks: '8.24 g',
     },
     {
       id: 2,
       institution: '(MSBTE)Maharashtra State Board of Technical Education',
-      degree: 'Diploma in  Electronics and Telecommunication Engineering (E&TC)',
+      degree: 'Diploma in Electronics and Telecommunication Engineering (E&TC)',
       duration: '2020 - 2023',
-    //   averageMarks: '75%'
     },
   ];
 
@@ -48,9 +55,9 @@ const AboutMe = () => {
       <h2 className={styles.heading}>About Me</h2>
       <p className={styles.subtext}>My professional journey and skills.</p>
 
-      {/* Resume Download Button */}
+     {/* Resume Download Button */}
       <a
-        href="/Bhargav__Resume_new.pdf" // Replace with the actual path to your resume file
+        href="/Bhargav__Resume_new.pdf"
         download="Bhargav_Resume.pdf"
         className={styles.resumeButton}
       >
@@ -59,11 +66,13 @@ const AboutMe = () => {
 
       {/* Work Experience Section */}
       <div className={styles.section}>
-        <h3 className={styles.sectionTitle}>Work Experience</h3>
+        <h3 className={styles.sectionTitle}>Working with Technology and Experience</h3>
         <div className={styles.timeline}>
           {workExperience.map((work) => (
             <div key={work.id} className={styles.timelineItem}>
-              <h4 className={styles.role}>{work.role}</h4>
+              <h4 className={`${styles.role} ${work.role === 'Software Engineer' ? styles.smallRole : ''}`}>
+                {work.role}
+              </h4>
               <p className={styles.company}>{work.company}</p>
               <p className={styles.duration}>{work.duration}</p>
               <p className={styles.description}>{work.description}</p>
