@@ -405,8 +405,13 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Ensure it's only visible when menu is open */
   }
 
+  /* Hide the box completely when menu is not active */
+  .nav-links:not(.active) {
+    display: none;
+  }
   .nav-links.active {
     display: flex; /* Show nav links when menu is active */
   }
