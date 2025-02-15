@@ -9,9 +9,9 @@ const ProjectDetails = ({ project, onClose }) => {
       <div className="project-details-content">
         <h2>About {project.name}</h2>
         <div className="project-details-grid">
-          <div className="project-image">
+          {/* <div className="project-image">
             <img src={project.image} alt={`${project.name} Project`} />
-          </div>
+          </div> */}
           <div className="project-info">
             <h3>Key Features</h3>
             <ul>
@@ -25,14 +25,14 @@ const ProjectDetails = ({ project, onClose }) => {
                 <span key={index}>{tech}</span>
               ))}
             </div>
-            <a
+            {/* <a
               href={project.demoLink}
               className="demo-button"
               target="_blank"
               rel="noopener noreferrer"
             >
               Live Demo
-            </a>
+            </a> */}
             <button onClick={onClose} className="close-button">
               Close
             </button>

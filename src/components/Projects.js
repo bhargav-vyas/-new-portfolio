@@ -10,46 +10,50 @@ const Projects = () => {
     {
       id: 1,
       name: "E-Learning Platform",
-      image: "/images/elearning.jpg", // Replace with actual image path
+      // image: "/images/elearning.jpg", // Replace with actual image path
       tech: "Spring Boot, Java, MySQL",
       description:
         "An e-learning platform built with Spring Boot, Java, and MySQL. It supports user authentication, course management, and more.",
       features: ["User Authentication","Course Management", "Assignments","Admin Dashboard"],
       technologies: ["Spring Boot","Maven","Java", "MySQL", "Hibernate"],
-      demoLink: "https://example.com",
+      // demoLink: "https://example.com",
+      githubLink: "https://github.com/bhargav-vyas/E-Learning-Hub.git"
     },
     {
       id: 2,
       name: "Blog Server",
-      image: "/images/blog.jpg", // Replace with actual image path
+      // image: "/images/blog.jpg", // Replace with actual image path
       tech: "Spring Boot, Java, Hibernate, MySQL",
       description:
         "A blog server built with Spring Boot, Java, Hibernate, and MySQL. It supports CRUD operations for blog posts and comments.",
       features: ["CRUD Operations", "User Comments", "REST APIs"],
       technologies: ["Spring Boot", "Java", "Hibernate", "MySQL"],
-      demoLink: "https://example.com",
+      // demoLink: "https://example.com",
+      githubLink: "https://github.com/bhargav-vyas/Bloging-application.git"
     },
     {
       id: 3,
       name: "File Upload Interface",
-      image: "/images/file-upload.jpg", // Replace with actual image path
+      // image: "/images/file-upload.jpg", // Replace with actual image path
       tech: "React.js, JavaScript",
       description:
         "A file upload interface built with React.js and JavaScript. It allows users to upload files and view upload history.",
       features: ["File Upload", "Upload History", "Drag and Drop"],
       technologies: ["React.js", "JavaScript"],
-      demoLink: "https://example.com",
+      // demoLink: "https://example.com",
+      githubLink: "https://github.com/bhargav-vyas/File_System_Upload.git"
     },
     {
       id: 4,
       name: "Tic-Tac-Toe Game",
-      image: "/images/tic-tac-toe.jpg", // Replace with actual image path
+      // image: "/images/tic-tac-toe.jpg", // Replace with actual image path
       tech: "React.js, JavaScript, CSS",
       description:
         "A simple Tic-Tac-Toe game built with React.js, JavaScript, and CSS. It supports two-player gameplay.",
       features: ["Two-Player Gameplay", "Responsive Design", "Win Detection"],
       technologies: ["React.js", "JavaScript", "CSS"],
-      demoLink: "https://example.com",
+      // demoLink: "https://example.com",
+      githubLink: "https://github.com/bhargav-vyas/Tic--Tac--Toe.git"
     },
   ];
 
@@ -65,7 +69,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <h2>Other Projects</h2>
+      <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
@@ -77,6 +81,14 @@ const Projects = () => {
             >
               View Details
             </button>
+            <a
+              href={project.githubLink}
+              className="github-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Link
+            </a>
           </div>
         ))}
       </div>

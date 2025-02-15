@@ -48,6 +48,7 @@ const AboutMe = () => {
     'Java', 'Spring Boot', 'Hibernate', 'MVC', 'Servlet', 
     'React', 'JavaScript', 'CSS', 'HTML', 'Git', 
     'Android Studio', 'Kotlin', 'Raspberry Pi'
+    ,'Docker', 'RESTful APIs', 'MySQL', 
   ];
 
   return (
